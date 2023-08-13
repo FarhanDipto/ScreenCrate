@@ -317,3 +317,4 @@ C:\Users\fdipt\Documents\Visual Studio 2019\ScreenCrate\ScreenCrate\obj\Debug\ne
 C:\Users\fdipt\Documents\Visual Studio 2019\ScreenCrate\ScreenCrate\obj\Debug\net5.0\ScreenCrate.pdb
 C:\Users\fdipt\Documents\Visual Studio 2019\ScreenCrate\ScreenCrate\obj\Debug\net5.0\ScreenCrate.genruntimeconfig.cache
 C:\Users\fdipt\Documents\Visual Studio 2019\ScreenCrate\ScreenCrate\obj\Debug\net5.0\Razor\Views\Orders\Stream.cshtml.g.cs
+C:\Users\fdipt\Documents\Visual Studio 2019\ScreenCrate\ScreenCrate\obj\Debug\net5.0\Razor\Views\Movies\Delete.cshtml.g.cs

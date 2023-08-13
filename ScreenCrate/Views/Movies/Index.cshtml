@@ -1,4 +1,5 @@
-﻿@model IEnumerable<Movie>
+﻿@using ScreenCrate.Models;
+@model IEnumerable<Movie>
 
 @{
     ViewData["Title"] = "List of Movies";
@@ -48,16 +49,16 @@
                     <p class="card-text">@item.Description</p>
                     <p class="card-text" style="font-family:serif"><i>Brought to you by, @item.Cinema.Name</i></p>
                     <p class="card-text"><b>Category: </b>@item.MovieCategory</p>
-                    <p class="card-text"><b>Release Date: </b>@item.EndDate.ToString("dd MMM yy")</p>
+                    <p class="card-text"><b>Release Date: </b>@item.StartDate.ToString("dd MMM yy")</p>
                 </div>
                 <div class="card-footer">
                     <p class="card-text">
                         <a class="btn btn-outline-primary float-right" asp-action="Details" asp-route-id="@item.Id">
                             <i class="bi bi-eye-fill"></i> Show Details
                         </a>
-                        @if (DateTime.Now > item.EndDate)
+                        @if (true)
                         {
-                            <a class="btn btn-info text-white disabled"
+                            <a class="btn btn-info text-white"
                                asp-controller="Orders"
                                asp-action="AddItemToShoppingCart"
                                asp-route-id="@item.Id">

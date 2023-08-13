@@ -33,14 +33,14 @@ namespace ScreenCrate.Models
         [Required(ErrorMessage = "Movie streaming URL is required")]
         public string MovieURL { get; set; }
 
-        [Display(Name = "Movie Start-Date")]
+        [Display(Name = "Movie Release-Date")]
         [Required(ErrorMessage = "Start date is required")]
         public DateTime StartDate { get; set; }
-
+        /*
         [Display(Name = "Movie End-Date")]
         [Required(ErrorMessage = "End date is required")]
         public DateTime EndDate { get; set; }
-
+        */
         [Display(Name = "Select a Category")]
         [Required(ErrorMessage = "Movie category is required")]
         public MovieCategory MovieCategory { get; set; }

@@ -36,23 +36,34 @@
                             </a>
                         </p>
                         <p class="card-text"><b>Category: </b>@Model.MovieCategory</p>
-                        <p class="card-text"><b>Start Date: </b>@Model.StartDate.ToString("dd MMM yy")</p>
-                        <p class="card-text"><b>End Date: </b>@Model.EndDate.ToString("dd MMM yy")</p>
-                        <p class="card-text ">
-                            <b>Status: </b>
-                            @if (DateTime.Now >= Model.StartDate && DateTime.Now <= Model.EndDate)
-                            {
-                                <span class="badge bg-success text-white">AVAILABLE</span>
-                            }
-                            else if (DateTime.Now > Model.EndDate)
-                            {
-                                <span class="badge bg-danger text-white">EXPIRED</span>
-                            }
-                            else
-                            {
-                                <span class="badge bg-primary text-white">UPCOMING</span>
-                            }
-                        </p>
+                        <p class="card-text"><b>Release Date: </b>@Model.StartDate.ToString("dd MMM yy")</p>
+                        <!--<p class="card-text"><b>End Date: </b>@Model.EndDate.ToString("dd MMM yy")</p>-->
+                    <p class="card-text ">
+                        <b>Status: </b>
+                        @if (DateTime.Now <= Model.StartDate)
+                        {
+                            <span class="badge bg-primary text-white">UPCOMING</span>
+                        }
+                        else
+                        {
+                            <span class="badge bg-success text-white">AVAILABLE</span>
+                        }
+
+                        <!--
+    @if (DateTime.Now >= Model.StartDate && DateTime.Now <= Model.EndDate)
+    {
+        <span class="badge bg-success text-white">AVAILABLE</span>
+    }
+    else if (DateTime.Now > Model.EndDate)
+    {
+        <span class="badge bg-danger text-white">EXPIRED</span>
+    }
+    else
+    {
+        <span class="badge bg-primary text-white">UPCOMING</span>
+    }
+        -->
+                    </p>
                         <p class="card-text">
                             <b>Actors: </b>
                             <hr />
@@ -76,10 +87,9 @@
                             <a class="btn btn-outline-primary float-right" asp-action="Index">
                                 <i class="bi bi-list-task"></i> Back to List
                             </a>
-                            <a class="btn btn-info text-white  @((DateTime.Now > Model.EndDate) ? "disabled" : "")" 
-                               asp-controller="Orders" 
+                            <a class="btn btn-info text-white  @((DateTime.Now > Model.EndDate) ? "disabled" : "")"
+                               asp-controller="Orders"
                                asp-action="AddItemToShoppingCart" asp-route-id="@Model.Id"><i class="bi bi-cart-plus"></i> Add to Cart (Price ৳@Model.Price<!--.ToString("c")-->)</a>
-                        </p>
                     </div>
                 </div>
             </div>

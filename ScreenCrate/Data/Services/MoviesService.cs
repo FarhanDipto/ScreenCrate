@@ -28,7 +28,7 @@ namespace ScreenCrate.Data.Services
                 MovieURL = data.MovieURL,
                 CinemaId = data.CinemaId,
                 StartDate = data.StartDate,
-                EndDate = data.EndDate,
+                //EndDate = data.EndDate,
                 MovieCategory = data.MovieCategory,
                 ProducerId = data.ProducerId
             };
@@ -84,7 +84,7 @@ namespace ScreenCrate.Data.Services
                 dbMovie.MovieURL = data.MovieURL;
                 dbMovie.CinemaId = data.CinemaId;
                 dbMovie.StartDate = data.StartDate;
-                dbMovie.EndDate = data.EndDate;
+                //dbMovie.EndDate = data.EndDate;
                 dbMovie.MovieCategory = data.MovieCategory;
                 dbMovie.ProducerId = data.ProducerId;
                 await _context.SaveChangesAsync();
